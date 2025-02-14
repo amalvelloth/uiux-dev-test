@@ -1,0 +1,313 @@
+section {
+    display: flex;
+    padding: 2rem;
+    gap: 3rem;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .section-2 {
+    background-color: #E7E9F8;
+    height: 100%;
+    padding-bottom: 0;
+    margin-bottom: 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .left h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.2;
+  }
+
+  .left p {
+    color: #616161;
+  }
+
+  h1 img {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    
+  }
+  
+  .left p {
+    margin-top: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+
+  span .triangle {
+    position: absolute;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    perspective: 1000px;
+  }
+
+  
+  
+
+  
+
+  .blue-card {
+    background-color: #344AC1;
+    color: white;
+    padding: 2rem;
+    border-radius: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .black-card {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    border-radius: 0;
+  }
+  
+  .card h3 {
+    margin-top: 1rem;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+  }
+  
+  .card p {
+    margin-top: 0.5rem;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    opacity: 0.9;
+  }
+
+  .price-card {
+    position: relative;
+    
+  }
+
+  .price-card .price {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  .price p {
+    margin: 0;
+  }
+
+  .price-card .price-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    color: white;
+    font-size: 1.5rem;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .price .discount-badge {
+    display: inline-block;
+    color: #FDD400;
+    border: 1px solid #FDD400;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    width: fit-content;
+    padding: 2px 15px;
+  }
+
+  .section-2 .left h1 span::after {
+    background-image: url('/assets/line-1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 15px;
+    bottom: -10px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .bg-circle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: 
+    #3449c14a;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+.bg-circle-1 { top: 15%; left: 10%; }
+.bg-circle-2 { top: 25%; left: 45%; }
+.bg-circle-3 { top: 35%; left: 25%; }
+.bg-circle-4 { top: 45%; left: 75%; }
+.bg-circle-5 { top: 65%; left: 15%; }
+.bg-circle-6 { top: 75%; left: 55%; }
+.bg-circle-7 { top: 85%; left: 35%; }
+.bg-circle-8 { top: 20%; left: 85%; }
+.bg-circle-9 { top: 55%; left: 90%; }
+.bg-circle-10 { top: 80%; left: 80%; }
+
+.highlight-text {
+    color: #b42ab5;
+    display: inline;  /* Ensures the text flows naturally */
+}
+
+.left h1 span {
+    color: #b42ab5;
+    display: contents;
+}
+
+.left h1 span::after {
+    content: '';
+    position: absolute;
+    background-image: url('/assets/line-1.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 15px;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.card-container {
+    position: relative;
+    z-index: 1;
+}
+
+
+  
+  /* Media Queries */
+  @media (min-width: 1400px) {
+    .blue-card {
+        grid-column: 2;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .section-1 {
+        padding-top: 6rem;
+    }
+
+    .section-2 {
+        padding-top: 6rem;
+    }
+
+    section {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .left {
+        padding: 1rem;
+    }
+  
+    .right {
+      padding: 1rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .lines-svg {
+        position: absolute;
+        right: 25%;
+        bottom: -90px;
+        width: 16%;
+        z-index: -1;
+    }
+    .right {
+        gap: 1.5rem;
+    }
+    .green-card {
+        background-color: #388A7C;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0;
+        z-index: 2;
+        position: relative;
+      }
+  }
+  
+  @media (max-width: 768px) {
+    h1 img {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        
+      }
+
+    .green-card {
+        background-color: #388A7C;
+        color: white;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        border-radius: 0;
+        z-index: 2;
+        position: relative;
+      }
+
+    .right {
+        perspective: none;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .card {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        left: 0 !important;
+    }
+
+    .lines-svg {
+        position: absolute;
+        right: 25%;
+        bottom: -40px;
+        width: 8%;
+        z-index: -1;
+    }
+
+}
+  
+  @media (max-width: 576px) {
+    section {
+      padding: 1rem 0.5rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  }
+
+
